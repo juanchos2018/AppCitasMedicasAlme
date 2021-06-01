@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.clinicalaluzpaciente.ui.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+
+    <fragment
+        android:id="@+id/nav_gestionar_citas_f"
+        android:name="com.example.clinicalaluzpaciente.ui.CitasFragment"
+        android:label="Citas médicas"
+        tools:layout="@layout/fragment_citas" />
+    <fragment
+        android:id="@+id/nav_historial_f"
+        android:name="com.example.clinicalaluzpaciente.ui.HistorialFragment"
+        android:label="Historial médico"
+        tools:layout="@layout/fragment_historial" />
+
+    <fragment
+        android:id="@+id/nav_ubicanos"
+        android:name="com.example.clinicalaluzpaciente.ui.UbicanosFragment"
+        android:label="Ubícanos"
+        tools:layout="@layout/fragment_ubicanos" />
+
+    <fragment
+        android:id="@+id/nav_reservar_esp"
+        android:name="com.example.clinicalaluzpaciente.ui.ReservarEspFragment"
+        android:label="Elegir especialidad"
+        tools:layout="@layout/fragment_reservar_esp" >
+        <action
+            android:id="@+id/action_reservarEspFragment_to_reservarDatetimeFragment"
+            app:destination="@id/nav_reservar_datetime" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_reservar_datetime"
+        android:name="com.example.clinicalaluzpaciente.ui.ReservarDatetimeFragment"
+        android:label="Elegir fecha y hora"
+        tools:layout="@layout/fragment_reservar_datetime" >
+        <action
+            android:id="@+id/action_reservarDatetimeFragment_to_reservarMedicoFragment"
+            app:destination="@id/nav_reservar_medico" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_reservar_medico"
+        android:name="com.example.clinicalaluzpaciente.ui.ReservarMedicoFragment"
+        android:label="Elegir médico"
+        tools:layout="@layout/fragment_reservar_medico" />
+</navigation>

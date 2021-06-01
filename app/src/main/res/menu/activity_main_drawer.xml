@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_inicio"
+            android:icon="@drawable/home32"
+            android:title="@string/menu_inicio" />
+        <item
+            android:id="@+id/nav_reservar_esp"
+            android:icon="@drawable/outline_medical_services_24"
+            android:title="@string/menu_reservar" />
+        <item
+            android:id="@+id/nav_gestionar_citas_f"
+            android:icon="@drawable/citas64"
+            android:title="@string/menu_citas" />
+        <item
+            android:id="@+id/nav_historial"
+            android:icon="@drawable/registrar64"
+            android:title="@string/menu_historial" />
+        <item
+            android:id="@+id/nav_ubicanos"
+            android:icon="@drawable/outline_location_on_24"
+            android:title="@string/menu_ubicanos" />
+
+    </group>    <item android:title="Comunicate">
+    <menu>
+        <group android:checkableBehavior="single">
+            <item
+                android:id="@+id/idNAV_INFORMACION"
+                android:title="Informacion de la App"
+                android:icon="@drawable/ic_app"/>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/outline_logout_24"
+                android:title="Cerrr Sesion" />
+        </group>
+    </menu>
+</item>
+</menu>
